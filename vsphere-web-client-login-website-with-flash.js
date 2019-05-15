@@ -22,7 +22,7 @@ if (document.location.hostname.match(hostname)) {
 	const iframeElementLogin = 'websso';
 	const inputElementUserName = 'username';
 	const inputElementPassword = 'password';
-	alert('test');
+
 	document.onreadystatechange = function () {
 	    if (document.readyState == 'complete') {
 	    	
