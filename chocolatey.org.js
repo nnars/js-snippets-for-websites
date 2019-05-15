@@ -18,6 +18,9 @@ if (document.location.hostname.match(/chocolatey\.org/)) {
     e.firstElementChild.style.borderRadius = '0.4em';
     e.firstElementChild.style.padding = '0.2em 0.6em';
     e.firstElementChild.style.boxShadow = '0.12em 0.12em #ccc';
+    e.firstElementChild.style.cursor = 'copy';
+    e.firstElementChild.onmouseover = function () { this.style.backgroundColor = 'dodgerblue'; };
+    e.firstElementChild.onmouseleave = function () { this.style.backgroundColor = 'transparent'; };
     e.onclick = () => {
       const cmdCode = ('' + e.lastChild.textContent).trim() + ' -y -v\n';
 
