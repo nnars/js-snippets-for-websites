@@ -5,7 +5,7 @@ if (document.location.hostname.match(/dict\.cc/)) {
   document.getElementById('maincontent').style.marginLeft = 0;
   document.querySelector('div.orangebar').style.display = 'none';
   document.querySelector('div.subnav').style.display = 'none';
-  if (location.search.startsWith('?s=')) {
+  if (location.search.match('s=')) {
     document.querySelector('#shst').style.display = 'none';
     document.querySelector('#inotherlangs').style.display = 'none';
     document.querySelectorAll('#maincontent > table tbody tr')[1].style.display = 'none';
