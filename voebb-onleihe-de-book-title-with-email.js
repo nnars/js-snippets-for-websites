@@ -36,5 +36,48 @@ if (document.location.hostname.match(/voebb\.onleihe\.de/)) {
     	inputElementConfirmedRecipient.value = email;
     }
     
+    
+    /*
+    var article_info = document.querySelector("#main > div.pagebox > div > main > div > div.row-2 > div > article > div.article-info > div.article-info-top");
+
+    var bookTitleEl = document.querySelector("#main > div.pagebox > div > main > div > div.row-2 > div > article > div.article-info > div.article-info-top > div.title-name");
+    var sBookTitle = bookTitleEl.lastChild.textContent.trim();
+
+    var bookSubtitleEl = document.querySelector("#main > div.pagebox > div > main > div > div.row-2 > div > article > div.article-info > div.article-info-top > div.subtitle");
+    var sbookSubtitle = bookSubtitleEl.lastChild.textContent.trim();
+
+    var publishingDateEl = document.querySelector("#main > div.pagebox > div > main > div > div.row-2 > div > article > div.article-info > div.article-info-top > div.publishing-date");
+    var spublishingDate = publishingDateEl.lastChild.textContent.trim();
+
+    var copyTitleBtn = document.createElement("button");
+    copyTitleBtn.textContent = 'copy title';
+    copyTitleBtn.style.border = '2px solid black';
+    copyTitleBtn.style.margin = '0 5px 0 0';
+    copyTitleBtn.style.backgroundColor = 'antiquewhite';
+    copyTitleBtn.style.padding = '4px 8px';
+    copyTitleBtn.style.fontFamily = 'monospace';
+    copyTitleBtn.style.borderRadius = '8px';
+    copyTitleBtn.style.fontWeight = 'bold';
+    copyTitleBtn.value = sBookTitle + ' (' + spublishingDate + ') ' + sbookSubtitle;
+    copyTitleBtn.addEventListener('click', fCopyTitle);
+
+    function fCopyTitle() { 
+
+      var bookFullTitle = sBookTitle + ' (' + spublishingDate + ') ' + sbookSubtitle;
+      updateClipboard(bookFullTitle);
+
+    }
+
+    function updateClipboard(newClip) {
+      navigator.clipboard.writeText(newClip).then(function() {
+        // clipboard successfully set
+      }, function() {
+        // clipboard write failed
+      });
+    }
+
+    article_info.prepend(copyTitleBtn);
+    */    
+    
   });
 }
