@@ -76,6 +76,21 @@ if (document.location.hostname.match(/voebb\.onleihe\.de/)) {
         article_info.prepend(copyTitleBtn);
 
     }
+    
+    function fCopyTitle() { 
+
+      var bookFullTitle = sBookTitle + ' (' + spublishingDate + ') ' + sbookSubtitle;
+      updateClipboard(bookFullTitle);
+
+    }
+
+    function updateClipboard(newClip) {
+      navigator.clipboard.writeText(newClip).then(function() {
+        // clipboard successfully set
+      }, function() {
+        // clipboard write failed
+      });
+    }
     */    
     
   });
