@@ -41,43 +41,43 @@ if (document.location.hostname.match(/voebb\.onleihe\.de/)) {
     var article_info = document.querySelector("#main > div.pagebox > div > main > div > div.row-2 > div > article > div.article-info > div.article-info-top");
     if (article_info) {
 
-    var bookTitleEl = document.querySelector("#main > div.pagebox > div > main > div > div.row-2 > div > article > div.article-info > div.article-info-top > div.title-name");
-    var sBookTitle = '';
-    if (bookTitleEl) {
-      sBookTitle = bookTitleEl.lastChild.textContent.trim();
-    }
-
-    var bookSubtitleEl = document.querySelector("#main > div.pagebox > div > main > div > div.row-2 > div > article > div.article-info > div.article-info-top > div.subtitle");
-    var sbookSubtitle = '';
-    if (bookSubtitleEl) {
-
-      if (bookSubtitleEl.textContent.trim() !== 'Untertitel:') {
-        sbookSubtitle = bookSubtitleEl.lastChild.textContent.trim();
+      var bookTitleEl = document.querySelector("#main > div.pagebox > div > main > div > div.row-2 > div > article > div.article-info > div.article-info-top > div.title-name");
+      var sBookTitle = '';
+      if (bookTitleEl) {
+        sBookTitle = bookTitleEl.lastChild.textContent.trim();
       }
 
-    }
+      var bookSubtitleEl = document.querySelector("#main > div.pagebox > div > main > div > div.row-2 > div > article > div.article-info > div.article-info-top > div.subtitle");
+      var sbookSubtitle = '';
+      if (bookSubtitleEl) {
 
-    var publishingDateEl = document.querySelector("#main > div.pagebox > div > main > div > div.row-2 > div > article > div.article-info > div.article-info-top > div.publishing-date");
-    var spublishingDate = '';
-    if (publishingDateEl) {
-      spublishingDate = publishingDateEl.lastChild.textContent.trim();
-    }
+        if (bookSubtitleEl.textContent.trim() !== 'Untertitel:') {
+          sbookSubtitle = bookSubtitleEl.lastChild.textContent.trim();
+        }
 
+      }
 
-    var copyTitleBtn = document.createElement("button");
-    copyTitleBtn.textContent = 'copy title';
-    copyTitleBtn.style.border = '2px solid black';
-    copyTitleBtn.style.margin = '0 5px 0 0';
-    copyTitleBtn.style.backgroundColor = 'antiquewhite';
-    copyTitleBtn.style.padding = '4px 8px';
-    copyTitleBtn.style.fontFamily = 'monospace';
-    copyTitleBtn.style.borderRadius = '8px';
-    copyTitleBtn.style.fontWeight = 'bold';
-    copyTitleBtn.value = (sBookTitle + ' (' + spublishingDate + ') ' + sbookSubtitle).trim();
-    copyTitleBtn.addEventListener('click', fCopyTitle);
+      var publishingDateEl = document.querySelector("#main > div.pagebox > div > main > div > div.row-2 > div > article > div.article-info > div.article-info-top > div.publishing-date");
+      var spublishingDate = '';
+      if (publishingDateEl) {
+        spublishingDate = publishingDateEl.lastChild.textContent.trim();
+      }
 
 
-    article_info.prepend(copyTitleBtn);
+      var copyTitleBtn = document.createElement("button");
+      copyTitleBtn.textContent = 'copy title';
+      copyTitleBtn.style.border = '2px solid black';
+      copyTitleBtn.style.margin = '0 5px 0 0';
+      copyTitleBtn.style.backgroundColor = 'antiquewhite';
+      copyTitleBtn.style.padding = '4px 8px';
+      copyTitleBtn.style.fontFamily = 'monospace';
+      copyTitleBtn.style.borderRadius = '8px';
+      copyTitleBtn.style.fontWeight = 'bold';
+      copyTitleBtn.value = (sBookTitle + ' (' + spublishingDate + ') ' + sbookSubtitle).trim();
+      copyTitleBtn.addEventListener('click', fCopyTitle);
+
+
+      article_info.prepend(copyTitleBtn);
 
     }
     
