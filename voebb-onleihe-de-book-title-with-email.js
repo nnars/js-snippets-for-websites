@@ -83,7 +83,7 @@ if (document.location.hostname.match(/voebb\.onleihe\.de/)) {
     
     function fCopyTitle() { 
 
-      var bookFullTitle = sBookTitle + ' (' + spublishingDate + ') ' + sbookSubtitle;
+      var bookFullTitle = (sBookTitle + ' (' + spublishingDate + ') ' + sbookSubtitle).trim();
       updateClipboard(bookFullTitle);
 
     }
