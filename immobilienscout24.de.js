@@ -146,7 +146,7 @@ ${salutation}
 <div style="margin-bottom: 0pt; font-size: 11pt; font-family: Arial;">Bautzener Str. 9</div>
 <div style="margin-bottom: 0pt; font-size: 11pt; font-family: Arial;">10820 Berlin</div>
 <div style="margin-bottom: 0pt; font-size: 11pt; font-family: Arial;">&nbsp;<br></div>
-<div style="margin-bottom: 0pt; font-size: 11pt; font-family: Arial; font-style: italic; text-align: right;">Berlin, 30.09.2020</div>
+<div style="margin-bottom: 0pt; font-size: 11pt; font-family: Arial; font-style: italic; text-align: right;">Berlin, ${(new Date()).toLocaleDateString('de-DE', {day: '2-digit', month: '2-digit', year: 'numeric'})}</div>
 <div style="margin-bottom: 8pt; font-size: 10pt; font-family: Arial; font-weight: bold;"><br></div>
 <div style="margin-bottom: 8pt; font-size: 11pt; font-family: Arial; font-weight: bold;">Betreff:</div>
 <div style="margin-bottom: 8pt; font-size: 10pt; font-family: Arial; font-weight: bold;">${objectId}</div>
